@@ -1,0 +1,22 @@
+@use '../partials/variables' as *;
+
+.container {
+	max-width: 1200px;
+	margin: auto;
+
+	.row {
+		display: flex;
+		flex-wrap: wrap;
+
+
+	}
+
+	.capo1 {
+		margin: 0.25rem;
+		width: calc(100% / 3);
+
+	}
+
+
+
+}
