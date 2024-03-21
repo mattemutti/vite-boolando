@@ -4,6 +4,19 @@ footer {
 	background-color: $bg_footer;
 	color: $light;
 
+	.container {
+		max-width: 1200px;
+		margin: auto;
+		height: 150px;
+	}
+
+	.row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 2rem;
+	}
+
 
 	a {
 		text-decoration: none;
