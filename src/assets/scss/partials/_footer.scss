@@ -1,0 +1,12 @@
+@use '../partials/variables' as *;
+
+footer {
+	background-color: $bg_footer;
+	color: $light;
+
+
+	a {
+		text-decoration: none;
+		color: $light;
+	}
+}
