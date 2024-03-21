@@ -1,13 +1,18 @@
 <script>
 
+import MainCard from './MainCard.vue';
+
 export default {
-	name: 'AppMain'
+	name: 'AppMain',
+	components: {
+		MainCard,
+	}
 }
 </script>
 <template>
 
 
-	<h1>Main</h1>
+	<MainCard />
 
 
 </template>
