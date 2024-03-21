@@ -1,20 +1,17 @@
 @use './partials/variables' as *;
 
-@use 'bootstrap';
+@use '../../../node_modules/bootstrap/scss/bootstrap.scss';
 
 body {
 	background-color: $light;
 }
 
-;
-
 header {
 	background-color: $primary_color;
 	text-align: center;
-}
 
-;
+	>img {
+		width: 300px;
+	}
 
-img {
-	width: 300px;
 }
