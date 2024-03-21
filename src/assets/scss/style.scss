@@ -1,3 +1,20 @@
 @use './partials/variables' as *;
 
 @use 'bootstrap';
+
+body {
+	background-color: $light;
+}
+
+;
+
+header {
+	background-color: $primary_color;
+	text-align: center;
+}
+
+;
+
+img {
+	width: 300px;
+}

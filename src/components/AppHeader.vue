@@ -1,12 +1,13 @@
 <script>
+
 export default {
 	name: 'AppHeader'
 }
 </script>
 <template>
 
-	<header class="header">
-		<nav class="nav container">
+	<header class="container">
+		<nav class="row">
 			<div>
 				<a class="no-link" href="">Donna</a>
 				<a class="no-link" href="">Uomo</a>
@@ -26,4 +27,4 @@ export default {
 
 
 </template>
-<style></style>
+<style lang="scss"></style>
