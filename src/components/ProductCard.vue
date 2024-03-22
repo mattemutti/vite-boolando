@@ -26,10 +26,13 @@ export default {
 
 
 			<div class="card-body">
-				<h5 class="card-title">Card title</h5>
-				<p class="card-text">Some quick example text to build on the card title and make up the bulk of
-					the card's content.</p>
-				<a href="#" class="btn btn-primary">Go somewhere</a>
+				<div>Levi's</div>
+				<h5 class="card-title">RELAXED FIT TEE UNISEX</h5>
+				<div>
+					<span class="text-danger">14,99 &euro;</span>
+					<span class="text-decoration-line-through">29,99 &euro;</span>
+				</div>
+
 			</div>
 		</div>
 
