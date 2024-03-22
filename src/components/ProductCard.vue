@@ -22,7 +22,9 @@ export default {
 	},
 	methods: {
 		discountPrice() {
-			this.priceDiscount = this.price / this.badgeDiscount
+			console.log(this.priceDiscount);
+			this.priceDiscount = (this.price / 20)
+			console.log(this.priceDiscount);
 
 		}
 
@@ -41,8 +43,8 @@ export default {
 			<div class="photo">
 
 				<div class="photo_on">
-					<img class="img_1" src="../../public/images/1.webp" alt="">
-					<img class="img_1b" src="../../public/images/1b.webp" alt="">
+					<img class="img_1" :src="'../../public/images/' + frontImage" alt="">
+					<img class="img_1b" :src="'../../ public / images / ' + backImage" alt="">
 				</div>
 				<!-- images -->
 				<div class="sconto"> 30 %</div>
