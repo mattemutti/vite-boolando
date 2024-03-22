@@ -9,7 +9,10 @@ export default {
 
 	<div class="col">
 		<div class="card">
-			<img src=".public/images/1.webp" class="card-img-top" alt="">
+			<div class="photo-on">
+				<img class="img-1" src="../../public/images/1.webp" alt="">
+				<img class="img-1b" src="../../public/images/1b.webp" alt="">
+			</div>
 			<div class="card-body">
 				<h5 class="card-title">Card title</h5>
 				<p class="card-text">Some quick example text to build on the card title and make up the bulk of

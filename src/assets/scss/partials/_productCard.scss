@@ -6,4 +6,24 @@
 	max-width: 1200px;
 
 
+	img {
+		width: 100%;
+	}
+
+	.photo-on {
+		position: relative;
+	}
+
+	.photo:hover .img-1b {
+		display: block;
+	}
+
+	.img-1b {
+		position: absolute;
+		display: none;
+		top: 0;
+		left: 0;
+	}
+
+
 }
