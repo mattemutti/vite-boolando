@@ -16,7 +16,7 @@ export default {
 	data() {
 		return {
 			priceDiscount: 0,
-			valueDiscount: 0,
+			valueDiscount: null,
 			indexBadges: 0,
 			priceFinalDiscount: 0,
 
@@ -30,19 +30,20 @@ export default {
 			//console.log(this.product.badges[this.indexBadges].value.substring(1, 3));
 			for (let i = 0; i < this.product.badges.length; i++) {
 				const element = this.product.badges[i];
-
-				console.log(this.product.badges[i]);
-				console.log(element);
-				if (element.type === 'discount' && element.type != 0) {
+				//console.log(this.product.badges[i]);
+				//console.log(element);
+				if (element.type === 'discount') {
 					this.valueDiscount = element.value.substring(1, 3);
-					console.log(this.valueDiscount);
-
-					this.priceDiscount = (this.product.price / this.valueDiscount).toFixed(2)
-
+					//	console.log(this.valueDiscount);
+					this.priceDiscount = (this.product.price * this.valueDiscount / 100).toFixed(2)
 					this.priceFinalDiscount = (this.product.price - this.priceDiscount).toFixed(2)
-
 					console.log(this.priceFinalDiscount);
+				} else if (element.value === null) {
+					this.priceFinalDiscount = this.product.price
+					console.log(this.priceFinalDiscount);
+
 				}
+
 			}
 		}
 
