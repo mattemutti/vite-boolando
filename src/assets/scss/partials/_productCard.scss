@@ -10,20 +10,51 @@
 		width: 100%;
 	}
 
-	.photo-on {
+	.photo_on {
 		position: relative;
 	}
 
-	.photo:hover .img-1b {
+	.photo:hover .img_1b {
 		display: block;
 	}
 
-	.img-1b {
+	.img_1b {
 		position: absolute;
 		display: none;
 		top: 0;
 		left: 0;
 	}
 
+	.heart-red:hover .heart {
+		color: $warning;
+	}
+
+	.sconto {
+		position: absolute;
+		bottom: 45%;
+		background-color: $warning;
+		;
+		color: $light;
+		padding: 0.25rem 0.25rem;
+	}
+
+	.info {
+		position: absolute;
+		left: 20%;
+		bottom: 45%;
+		background-color: $green;
+		color: $light;
+		padding: 0.25rem 0.25rem;
+	}
+
+	.heart {
+		position: absolute;
+		top: 1rem;
+		right: 0;
+		background-color: var(--boolando-wite);
+		padding: 1rem 1rem;
+
+
+	}
 
 }
