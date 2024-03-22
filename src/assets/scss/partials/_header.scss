@@ -5,25 +5,21 @@ header {
 	background-color: $primary_color;
 	text-align: center;
 	height: 100px;
-	padding: 1rem;
+	padding: 2rem;
 
 	.container {
 		max-width: 1200px;
-		margin: auto;
+
 	}
 
-	.row {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+	.logo {
+		width: 120px;
 	}
 
-	img {
-		width: 300px;
-	}
-
-	a {
+	.no-link {
 		text-decoration: none;
-		color: $light;
+		color: var(--boolando-wite);
 	}
+
+
 }

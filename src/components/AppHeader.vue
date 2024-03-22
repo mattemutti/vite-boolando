@@ -9,18 +9,21 @@ export default {
 	<header>
 		<nav class="container">
 			<div class="row">
-				<div>
-					<a class="no-link" href="">Donna</a>
-					<a class="no-link" href="">Uomo</a>
-					<a class="no-link" href="">Bambino</a>
-				</div>
+				<div class="col d-flex justify-content-between align-items-center">
 
-				<img class="logo" src="../../public/images/boolean-logo.png" alt="">
+					<div>
+						<a class="no-link p-2" href="">Donna</a>
+						<a class="no-link p-2" href="">Uomo</a>
+						<a class="no-link p-2" href="">Bambino</a>
+					</div>
 
-				<div class="link">
-					<a class="no-link" href=""><i class="fa-solid fa-person"></i></a>
-					<a class="no-link" href=""><i class="fa-regular fa-heart"></i></a>
-					<a class="no-link" href=""><i class="fa-solid fa-bag-shopping"></i></a>
+					<img class="logo" src="../../public/images/boolean-logo.png" alt="">
+
+					<div class="link p-1">
+						<a class="no-link p-2" href=""><i class="fa-solid fa-person"></i></a>
+						<a class="no-link p-2" href=""><i class="fa-regular fa-heart"></i></a>
+						<a class="no-link p-2" href=""><i class="fa-solid fa-bag-shopping"></i></a>
+					</div>
 				</div>
 			</div>
 		</nav>
