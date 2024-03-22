@@ -51,6 +51,7 @@ export default {
 	mounted() {
 
 		this.calcolateDiscountPrice()
+		console.log(this.product.badges);
 	}
 }
 </script>
@@ -66,8 +67,10 @@ export default {
 					<img class="img_1b" :src="'../../public/images/' + product.backImage" alt="">
 				</div>
 				<!-- images -->
-				<div class="sconto"> {{ valueDiscount }}%</div>
-				<div class="info">Sostenibilità</div>
+
+				<div v-if="valueDiscount != null" class="sconto"> {{ valueDiscount }}%</div>
+				<div v-if="product.badges[0].type === 'tag'" class="info">{{ product.badges[0].value }}</div>
+
 				<div class="heart-red">
 					<div class="heart"><i class="fa-solid fa-heart"></i></div>
 				</div>
@@ -79,8 +82,10 @@ export default {
 				<div>{{ product.brand }}</div>
 				<h5 class="card-title">{{ product.name }}</h5>
 				<div>
-					<span class="text-danger"> {{ priceFinalDiscount }} &euro;</span>
-					<span class="text-decoration-line-through">{{ product.price }} &euro;</span>
+					<span v-if="valueDiscount != null" class="text-danger"> {{ priceFinalDiscount }} &euro;</span>
+					<span v-if="valueDiscount == null" class="text-danger"> {{ product.price }} &euro;</span>
+					<span v-if="valueDiscount != null" class="text-decoration-line-through">{{ product.price }}
+						&euro;</span>
 				</div>
 
 			</div>
