@@ -44,7 +44,7 @@ export default {
 
 				<div class="photo_on">
 					<img class="img_1" :src="'../../public/images/' + frontImage" alt="">
-					<img class="img_1b" :src="'../../ public / images / ' + backImage" alt="">
+					<img class="img_1b" :src="'../../public/images/' + backImage" alt="">
 				</div>
 				<!-- images -->
 				<div class="sconto"> 30 %</div>
