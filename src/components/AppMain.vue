@@ -1,11 +1,11 @@
 <script>
 
-import MainCard from './MainCard.vue';
+import ProductCard from './ProductCard.vue';
 
 export default {
 	name: 'AppMain',
 	components: {
-		MainCard,
+		ProductCard,
 	}
 }
 </script>
