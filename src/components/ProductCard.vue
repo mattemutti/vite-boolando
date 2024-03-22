@@ -1,7 +1,36 @@
 <script>
 
 export default {
-	name: 'ProductCard'
+	name: 'ProductCard',
+	props: {
+		frontImage: String,
+		backImage: String,
+		brand: String,
+		name: String,
+		price: Number,
+		favorite: Boolean,
+		badgeTag: String,
+		badgeDiscount: Number,
+	},
+	data() {
+		return {
+			priceDiscount: 0,
+
+
+		}
+
+	},
+	methods: {
+		discountPrice() {
+			this.priceDiscount = this.price / this.badgeDiscount
+
+		}
+
+	},
+	mounted() {
+
+		this.discountPrice()
+	}
 }
 </script>
 <template>
@@ -26,11 +55,11 @@ export default {
 
 
 			<div class="card-body">
-				<div>Levi's</div>
-				<h5 class="card-title">RELAXED FIT TEE UNISEX</h5>
+				<div>{{ brand }}</div>
+				<h5 class="card-title">{{ name }}</h5>
 				<div>
-					<span class="text-danger">14,99 &euro;</span>
-					<span class="text-decoration-line-through">29,99 &euro;</span>
+					<span class="text-danger"> {{ discountPrice }} &euro;</span>
+					<span class="text-decoration-line-through">{{ price }} &euro;</span>
 				</div>
 
 			</div>
