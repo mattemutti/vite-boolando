@@ -17,7 +17,7 @@ export default {
 						<a class="no-link p-2" href="">Bambino</a>
 					</div>
 
-					<img class="logo" src="../../public/images/boolean-logo.png" alt="">
+					<img id="logo" src="../../public/images/boolean-logo.png" alt="">
 
 					<div class="link p-1">
 						<a class="no-link p-2" href=""><i class="fa-solid fa-person"></i></a>
