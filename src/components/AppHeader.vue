@@ -9,7 +9,7 @@ export default {
 	<header>
 		<nav class="container">
 			<div class="row">
-				<div class="col d-flex justify-content-between align-items-center">
+				<div class="col d-flex justify-content-between align-items-center p-4">
 
 					<div>
 						<a class="no-link p-2" href="">Donna</a>
