@@ -1,4 +1,5 @@
 <script>
+import { state } from "../state";
 
 export default {
 	name: 'ProductCard',
