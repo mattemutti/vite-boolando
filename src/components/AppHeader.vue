@@ -1,7 +1,13 @@
 <script>
+import { state } from "../state";
 
 export default {
-	name: 'AppHeader'
+	name: 'AppHeader',
+	data() {
+		return {
+			state
+		}
+	}
 }
 </script>
 <template>

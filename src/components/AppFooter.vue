@@ -1,7 +1,14 @@
 <script>
+import { state } from "../state";
 
 export default {
-	name: 'AppFooter'
+	name: 'AppFooter',
+	data() {
+		return {
+			state,
+
+		}
+	}
 }
 </script>
 <template>

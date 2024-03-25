@@ -10,7 +10,7 @@ export default {
 	},
 	data() {
 		return {
-			// products,
+			state
 		}
 	},
 	mounted() {

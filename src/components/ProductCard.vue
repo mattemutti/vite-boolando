@@ -20,6 +20,7 @@ export default {
 			valueDiscount: null,
 			indexBadges: 0,
 			priceFinalDiscount: 0,
+			state,
 
 
 		}
