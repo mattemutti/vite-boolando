@@ -24,7 +24,7 @@ export default {
 	<div class="container">
 		<div class="row row-cols-1 row-cols-sm-3 row-cols-md-4 p-4 g-2">
 
-			<ProductCard :product="product" v-for="product in products" />
+			<ProductCard :product="product" v-for="product in state.products" />
 
 			<!-- <ProductCard :frontImage="product.frontImage" :backImage="product.backImage" :brand="product.brand"
 				:name="product.name" :price="product.price" :favorite="product.favorite" v-for="product in products" /> -->
