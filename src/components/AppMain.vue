@@ -19,7 +19,6 @@ export default {
 		showProduct(infoProd) {
 			//console.log('cliccato', infoProd);
 			//info prod è il mio proxyarray della card cliccata 
-
 			this.infoDataCard = true;
 			this.infoProductArray = infoProd;
 			console.log(this.infoProductArray);
@@ -40,11 +39,16 @@ export default {
 		<div class="contenitore">
 			<div class="riga">
 				<div class="colonna">
-					<div>Nome prodotto</div>
-					<div @click="closeInfoBox()">X</div>
+					<div>{{ infoProductArray.brand }}</div>
+					<div @click="closeInfoBox()"> <i class="fa-solid fa-x"></i> </div>
 				</div>
-				<div>Descrizione prodotto</div>
-				<div>{{ }}</div>
+				<div class="colonna_interna">
+					<img class="img_info" :src="'../../public/images/' + infoProductArray.frontImage" alt="">
+					<div class="box_interno">
+						<div>Marca: {{ infoProductArray.name }}</div>
+						<div>Prezzo: {{ infoProductArray.price }}</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -68,23 +72,47 @@ export default {
 
 
 	.contenitore {
-		background-color: red;
+		background-color: rgb(189, 114, 114);
+		opacity: 90%;
 		position: fixed;
 		width: 600px;
-		height: 300px;
+		height: 350px;
 		top: 30%;
 		left: 40%;
 		z-index: 1;
+		padding: 2rem;
+		border-radius: 1rem;
+
+
 	}
 
 	.colonna {
 		display: flex;
 		justify-content: space-between;
 		color: white;
-
-
-
 	}
 
+	.colonna_interna {
+		display: flex;
+		padding: 3rem;
+
+
+		.box_interno {
+			display: flex;
+			flex-direction: column;
+			justify-content: left;
+			text-align: left;
+			color: white;
+			gap: 0.5rem;
+
+
+		}
+
+		.img_info {
+			width: 150px;
+			padding-right: 3rem;
+		}
+
+	}
 }
 </style>
