@@ -13,6 +13,7 @@ export default {
 			state,
 			infoDataCard: false,
 			infoProductArray: [],
+			valueDiscount: null,
 		}
 	},
 	methods: {
@@ -45,8 +46,11 @@ export default {
 				<div class="colonna_interna">
 					<img class="img_info" :src="'../../public/images/' + infoProductArray.frontImage" alt="">
 					<div class="box_interno">
-						<div>Marca: {{ infoProductArray.name }}</div>
-						<div>Prezzo: {{ infoProductArray.price }}</div>
+						<div>Modello: {{ infoProductArray.name }}</div>
+						<div class="">Prezzo Listino: {{ infoProductArray.price }}</div>
+						<div>
+
+						</div>
 					</div>
 				</div>
 			</div>
@@ -54,6 +58,7 @@ export default {
 	</div>
 	<div class="container">
 		<div class="row row-cols-1 row-cols-sm-3 row-cols-md-4 p-4 g-2">
+
 
 			<ProductCard :product="product" v-for="product in state.products" @info-product="showProduct" />
 
