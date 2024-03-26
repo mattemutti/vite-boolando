@@ -14,6 +14,7 @@ export default {
 			indexBadges: 0,
 			priceFinalDiscount: 0,
 			state,
+			emits: ['product'],
 
 		}
 	},
@@ -31,8 +32,9 @@ export default {
 			}
 		},
 		showProduct() {
-			console.log('cliccato', this.product.name);
-
+			this.$emit('infoProduct')
+			//console.log(this.$emit);
+			//console.log(this.emits);
 		}
 	},
 	mounted() {
@@ -63,7 +65,7 @@ export default {
 			<!-- box over image -->
 
 
-			<div class="card-body" @click="showProduct">
+			<div class="card-body" @click="showProduct()">
 				<div>{{ product.brand }}</div>
 				<h5 class="card-title">{{ product.name }}</h5>
 				<div>
