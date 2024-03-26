@@ -10,13 +10,19 @@ export default {
 	},
 	data() {
 		return {
-			state
+			state,
+			infoDataCard: false,
 		}
 	},
 	methods: {
 		showProduct(infoProd) {
-			console.log('cliccato', infoProd);
+			//console.log('cliccato', infoProd);
+			//info prod è il mio proxyarray della card cliccata 
 
+			this.infoDataCard = true;
+		},
+		closeInfoBox() {
+			this.infoDataCard = false;
 		}
 	},
 	mounted() {
@@ -31,9 +37,10 @@ export default {
 
 			<ProductCard :product="product" v-for="product in state.products" @info-product="showProduct" />
 
-			<!-- <ProductCard :frontImage="product.frontImage" :backImage="product.backImage" :brand="product.brand"
-				:name="product.name" :price="product.price" :favorite="product.favorite" v-for="product in products" /> -->
-
+			<div v-if="infoDataCard === true" class="info_card_screen">
+				Dati Card
+				<div @click="closeInfoBox()">X</div>
+			</div>
 		</div>
 	</div>
 
