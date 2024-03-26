@@ -14,7 +14,6 @@ export default {
 		}
 	},
 	mounted() {
-		console.log(this.state);
 		this.state.getProducts(this.state.base_products_api_url)
 	}
 }

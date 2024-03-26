@@ -5,14 +5,7 @@ export default {
 	name: 'ProductCard',
 	props: {
 		product: Object
-		// frontImage: String,
-		// backImage: String,
-		// brand: String,
-		// name: String,
-		// price: Number,
-		// favorite: Boolean,
-		// badgeTag: String,
-		// badgeDiscount: Number,
+
 	},
 	data() {
 		return {
@@ -22,38 +15,28 @@ export default {
 			priceFinalDiscount: 0,
 			state,
 
-
 		}
-
 	},
 	methods: {
 		calcolateDiscountPrice() {
-			//console.log(this.priceDiscount);
-			//console.log(this.product.badges[this.indexBadges].value.substring(1, 3));
 			for (let i = 0; i < this.product.badges.length; i++) {
 				const element = this.product.badges[i];
-				//console.log(this.product.badges[i]);
-				//console.log(element);
 				if (element.type === 'discount') {
 					this.valueDiscount = element.value.substring(1, 3);
-					//	console.log(this.valueDiscount);
 					this.priceDiscount = (this.product.price * this.valueDiscount / 100).toFixed(2)
 					this.priceFinalDiscount = (this.product.price - this.priceDiscount).toFixed(2)
-					console.log(this.priceFinalDiscount);
 				} else if (element.value === null) {
 					this.priceFinalDiscount = this.product.price
-					console.log(this.priceFinalDiscount);
-
 				}
-
 			}
-		}
+		},
+		showProduct() {
+			console.log('cliccato', this.product.name);
 
+		}
 	},
 	mounted() {
-
 		this.calcolateDiscountPrice()
-		console.log(this.product.badges);
 	}
 }
 </script>
@@ -80,7 +63,7 @@ export default {
 			<!-- box over image -->
 
 
-			<div class="card-body">
+			<div class="card-body" @click="showProduct">
 				<div>{{ product.brand }}</div>
 				<h5 class="card-title">{{ product.name }}</h5>
 				<div>
