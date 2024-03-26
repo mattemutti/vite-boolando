@@ -14,8 +14,8 @@ export default {
 		}
 	},
 	methods: {
-		showProduct() {
-			console.log('cliccato');
+		showProduct(infoProd) {
+			console.log('cliccato', infoProd);
 
 		}
 	},

@@ -32,7 +32,7 @@ export default {
 			}
 		},
 		showProduct() {
-			this.$emit('infoProduct')
+			this.$emit('infoProduct', this.product)
 			//console.log(this.$emit);
 			//console.log(this.emits);
 		}
