@@ -1,8 +1,13 @@
 <script>
 import { state } from "../state";
+import CalcDiscount from './CalcDiscount.vue';
+
 
 export default {
 	name: 'ProductCard',
+	components: {
+		CalcDiscount,
+	},
 	props: {
 		product: Object
 

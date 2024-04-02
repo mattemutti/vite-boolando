@@ -12,16 +12,32 @@ export default {
 		return {
 			state,
 			infoDataCard: true,
-
+			priceFinalDiscount: 0,
 
 		}
 	},
 	methods: {
 		closeInfoBox() {
 			this.$emit('infoDataCard', this.infoDataCard)
-			console.log(this.infoDataCard);
-		}
+			//console.log(this.infoDataCard);
+		},
+		calcolateDiscountPrice() {
+			for (let i = 0; i < this.product.badges.length; i++) {
+				const element = this.product.badges[i];
+				if (element.type === 'discount') {
+					this.valueDiscount = element.value.substring(1, 3);
+					this.priceDiscount = (this.product.price * this.valueDiscount / 100).toFixed(2)
+					this.priceFinalDiscount = (this.product.price - this.priceDiscount).toFixed(2)
+				} else if (element.value === null) {
+					this.priceFinalDiscount = this.product.price
+					//console.log(this.priceFinalDiscount);
+				}
+			}
+		},
 
+	},
+	mounted() {
+		this.calcolateDiscountPrice()
 	}
 }
 
@@ -40,8 +56,10 @@ export default {
 				<img class="img_info" :src="'../../public/images/' + product.frontImage" alt="">
 				<div class="box_interno">
 					<div>Modello: {{ product.name }}</div>
-					<div class="">Prezzo Listino: {{ product.price }}</div>
-					<div class="">Prezzo Scontato: {{ }}</div>
+
+					<div class="text-decoration-line-through">Prezzo Listino: {{ product.price }}</div>
+					<div class="">Prezzo Scontato: {{ priceFinalDiscount }}</div>
+
 					<div>
 
 					</div>
