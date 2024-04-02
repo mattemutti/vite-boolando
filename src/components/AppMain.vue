@@ -2,11 +2,13 @@
 
 import { state } from '../state';
 import ProductCard from './ProductCard.vue';
+import Modal from './Modal.vue';
 
 export default {
 	name: 'AppMain',
 	components: {
 		ProductCard,
+		Modal,
 	},
 	data() {
 		return {
@@ -26,6 +28,7 @@ export default {
 		},
 		closeInfoBox() {
 			this.infoDataCard = false;
+			console.log('cliccato');
 		}
 	},
 	mounted() {
@@ -37,7 +40,10 @@ export default {
 
 	<div v-if="infoDataCard === true" class="info_card_screen">
 		<!-- metto le classi in italiano perchè ho importato bootstrap -->
-		<div class="contenitore">
+
+		<Modal :product="infoProductArray" @info-data-card="closeInfoBox" />
+
+		<!-- <div class="contenitore">
 			<div class="riga">
 				<div class="colonna">
 					<div>{{ infoProductArray.brand }}</div>
@@ -48,13 +54,14 @@ export default {
 					<div class="box_interno">
 						<div>Modello: {{ infoProductArray.name }}</div>
 						<div class="">Prezzo Listino: {{ infoProductArray.price }}</div>
+						<div class="">Prezzo Scontato: {{ }}</div>
 						<div>
 
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 	</div>
 	<div class="container">
 		<div class="row row-cols-1 row-cols-sm-3 row-cols-md-4 p-4 g-2">
