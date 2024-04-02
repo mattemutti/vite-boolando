@@ -24,11 +24,11 @@ export default {
 			//info prod è il mio proxyarray della card cliccata 
 			this.infoDataCard = true;
 			this.infoProductArray = infoProd;
-			console.log(this.infoProductArray);
+			//console.log(this.infoProductArray);
 		},
 		closeInfoBox() {
 			this.infoDataCard = false;
-			console.log('cliccato');
+			//console.log('cliccato');
 		}
 	},
 	mounted() {
